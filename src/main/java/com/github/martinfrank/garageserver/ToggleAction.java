@@ -14,6 +14,7 @@ public class ToggleAction extends GpioAction {
         myPin = gpio.provisionDigitalOutputPin(pin,   // PIN NUMBER
                 "My Pin",           // PIN FRIENDLY NAME (optional)
                 PinState.LOW);      // PIN STARTUP STATE (optional)
+
     }
 
     @Override

@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "empty log file /var/log/motion/motion.log";
+echo "empty log file /var/log/motion/motion.log"
 
 rm /var/log/motion/motion.log
 touch /var/log/motion/motion.log

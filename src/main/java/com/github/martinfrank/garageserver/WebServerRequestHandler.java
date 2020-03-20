@@ -23,6 +23,7 @@ public class WebServerRequestHandler implements HttpHandler {
         buttons = new ArrayList<>();
         buttons.add(new HtmlSubmitButton("action", "GPIO_04", "GPIO 04<br/>Licht an/aus", new ToggleAction(gpio, RaspiPin.GPIO_04)));
         buttons.add(new HtmlSubmitButton("action", "GPIO_05", "GPIO 05<br>Knopf", new PulseAction(gpio, RaspiPin.GPIO_05, 250)));
+        buttons.add(new HtmlSubmitButton("sendNotification", "sendNotification", "sendNotification", new PulseAction(gpio, RaspiPin.GPIO_05, 250)));
     }
 
     @Override

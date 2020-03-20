@@ -7,9 +7,9 @@ public class HtmlSubmitButton {
     private final String name;
     private final String value;
     private final String text;
-    private final GpioAction action;
+    private final SubmitAction action;
 
-    public HtmlSubmitButton(String name, String value, String text, GpioAction action) {
+    public HtmlSubmitButton(String name, String value, String text, SubmitAction action) {
         this.name = name;
         this.value = value;
         this.text = text;
