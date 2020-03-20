@@ -1,4 +1,4 @@
-package com.github.martinfrank.raspi.webserver;
+package com.github.martinfrank.garageserver;
 
 import com.pi4j.io.gpio.GpioController;
 import com.pi4j.io.gpio.RaspiPin;
@@ -61,7 +61,7 @@ public class WebServerRequestHandler implements HttpHandler {
         //https://strobelstefan.org/?p=5772
 
         final StringBuilder content = new StringBuilder("<!doctype html><html><head/><body>");
-        content.append("<div align=\"center\"><embed src=\"http://192.168.0.39:8081\" style=\"width:680px; height: 520px;\"></div><br/>");
+        content.append("<div align=\"center\"><embed src=\"http://192.168.0.64:8081\" style=\"width:680px; height: 520px;\"></div><br/>");
         content.append("<div align=\"center\"><form method=\"post\">");
         for (HtmlSubmitButton button : buttons) {
             content.append(button.createSubmitButtonHtmlString());

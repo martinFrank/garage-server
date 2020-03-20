@@ -1,4 +1,4 @@
-package com.github.martinfrank.raspi.webserver;
+package com.github.martinfrank.garageserver;
 
 import com.pi4j.io.gpio.GpioController;
 

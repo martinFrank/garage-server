@@ -272,7 +272,7 @@
                     <!-- MainClass in mainfest make a executable jar -->
                     <archive>
                         <manifest>
-                            <mainClass>com.github.martinfrank.raspi.webserver.WebServerApp</mainClass>
+                            <mainClass>com.github.martinfrank.garageserver.GarageServer</mainClass>
                         </manifest>
                     </archive>
 

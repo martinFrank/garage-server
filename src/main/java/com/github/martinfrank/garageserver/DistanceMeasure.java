@@ -1,10 +1,9 @@
-package com.github.martinfrank.raspi.webserver;
+package com.github.martinfrank.garageserver;
 
 import com.pi4j.io.gpio.*;
 import com.pi4j.io.gpio.event.GpioPinDigitalStateChangeEvent;
 import com.pi4j.io.gpio.event.GpioPinListenerDigital;
 
-import java.awt.*;
 import java.util.Timer;
 import java.util.TimerTask;
 
