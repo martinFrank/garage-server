@@ -4,6 +4,7 @@ com/github/martinfrank/garageserver/GarageServer.class
 com/github/martinfrank/garageserver/NotificationRequestUtil.class
 com/github/martinfrank/garageserver/PulseAction.class
 com/github/martinfrank/garageserver/SendNotificationAction.class
+com/github/martinfrank/garageserver/MeasureDistanceAction.class
 com/github/martinfrank/garageserver/ToggleAction.class
 com/github/martinfrank/garageserver/GpioAction.class
 com/github/martinfrank/garageserver/HtmlSubmitButton.class

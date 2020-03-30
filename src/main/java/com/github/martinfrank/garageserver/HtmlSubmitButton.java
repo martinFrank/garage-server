@@ -22,7 +22,7 @@ public class HtmlSubmitButton {
 
     public void apply(String name, String value) {
         if (Objects.equals(this.name, name) && Objects.equals(this.value, value)) {
-            System.out.println("apply");
+            System.out.println("apply " + name);
             action.apply();
         }
     }

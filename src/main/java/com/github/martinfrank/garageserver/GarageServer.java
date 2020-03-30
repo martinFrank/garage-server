@@ -13,10 +13,11 @@ public class GarageServer {
     private final GpioController gpio;
     private final WebServerRequestHandler webServerRequestHandler;
 
+
     public static void main(String[] args) {
         try {
             System.out.println("main...");
-            new GarageServer();
+            GarageServer server = new GarageServer();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -24,6 +25,8 @@ public class GarageServer {
 
 
     public GarageServer() throws IOException {
+
+
         gpio = GpioFactory.getInstance();
         System.out.println("gpio:" + gpio);
         webServerRequestHandler = new WebServerRequestHandler(gpio);
@@ -34,7 +37,7 @@ public class GarageServer {
         server.setExecutor(null); // creates a default executor
         server.start();
         System.out.println("server.start()");
-        //new DistanceMeasure(gpio, RaspiPin.GPIO_27, RaspiPin.GPIO_28);
+//        //new DistanceMeasure(gpio, RaspiPin.GPIO_27, RaspiPin.GPIO_28);
     }
 
 

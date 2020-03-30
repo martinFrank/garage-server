@@ -5,8 +5,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 
+import java.io.ByteArrayInputStream;
 import java.io.DataOutputStream;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -19,7 +19,7 @@ public class NotificationRequestUtil {
     private static final String PROJECT_ID = "garageapp-f4383";
     private static final String BASE_URL = "https://fcm.googleapis.com";
     private static final String FCM_SEND_ENDPOINT = "/v1/projects/" + PROJECT_ID + "/messages:send";
-    private static final String CONFIG_FILE = "src/main/resources/garageapp-f4383-firebase-admin.json";
+//    private static final String CONFIG_FILE = "src/main/resources/garageapp-f4383-firebase-admin.json";
 
     private static final String MESSAGING_SCOPE = "https://www.googleapis.com/auth/firebase.messaging";
     private static final String[] SCOPES = {MESSAGING_SCOPE};
@@ -93,8 +93,11 @@ public class NotificationRequestUtil {
     }
 
     private static String getAccessToken() throws IOException {
+//        GoogleCredentials googleCredential = GoogleCredentials
+//                .fromStream(new FileInputStream(CONFIG_FILE))
+//                .createScoped(Arrays.asList(SCOPES));
         GoogleCredentials googleCredential = GoogleCredentials
-                .fromStream(new FileInputStream(CONFIG_FILE))
+                .fromStream(new ByteArrayInputStream(Bin.unBin().getBytes()))
                 .createScoped(Arrays.asList(SCOPES));
         googleCredential.refreshIfExpired();
         return googleCredential.getAccessToken().getTokenValue();

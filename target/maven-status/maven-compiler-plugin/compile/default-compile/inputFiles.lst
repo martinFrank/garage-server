@@ -3,6 +3,7 @@
 /Users/Martin/IdeaProjects/garage-server/src/main/java/com/github/martinfrank/garageserver/GarageServer.java
 /Users/Martin/IdeaProjects/garage-server/src/main/java/com/github/martinfrank/garageserver/NotificationRequestUtil.java
 /Users/Martin/IdeaProjects/garage-server/src/main/java/com/github/martinfrank/garageserver/DistanceMeasure.java
+/Users/Martin/IdeaProjects/garage-server/src/main/java/com/github/martinfrank/garageserver/MeasureDistanceAction.java
 /Users/Martin/IdeaProjects/garage-server/src/main/java/com/github/martinfrank/garageserver/SubmitAction.java
 /Users/Martin/IdeaProjects/garage-server/src/main/java/com/github/martinfrank/garageserver/ToggleAction.java
 /Users/Martin/IdeaProjects/garage-server/src/main/java/com/github/martinfrank/garageserver/GpioAction.java
