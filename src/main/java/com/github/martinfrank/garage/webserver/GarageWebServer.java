@@ -7,31 +7,23 @@ import java.net.InetSocketAddress;
 
 public class GarageWebServer {
 
-    private final HttpServer server;
-    private final WebServerRequestHandler webServerRequestHandler;
-
-
     public static void main(String[] args) {
         try {
-            System.out.println("main...");
-            GarageWebServer server = new GarageWebServer();
+            System.out.println("starting new Webserver");
+            new GarageWebServer().startUp();
         } catch (IOException e) {
+            System.out.println("error starting Webserver: " + e);
             e.printStackTrace();
         }
     }
 
-
-    public GarageWebServer() throws IOException {
-
-        webServerRequestHandler = new WebServerRequestHandler();
-        System.out.println("webServerRequestHandler:" + webServerRequestHandler);
-        server = HttpServer.create(new InetSocketAddress(8000), 0);
-        System.out.println("server:" + server);
-        server.createContext("/", webServerRequestHandler);
+    private void startUp() throws IOException {
+        final WebServerRequestHandler webServerRequestHandler = new WebServerRequestHandler();
+        final HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
+        server.createContext("/garage/webserver", webServerRequestHandler);
         server.setExecutor(null); // creates a default executor
         server.start();
-        System.out.println("server.start()");
-//        //new DistanceMeasure(gpio, RaspiPin.GPIO_27, RaspiPin.GPIO_28);
+        System.out.println("server ist started...");
     }
 
 
