@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>-->
+    <!--    <meta http-equiv="Pragma" content="no-cache"/>-->
+    <!--    <meta http-equiv="Expires" content="0"/>-->
+    <script type="text/javascript" language="javascript">
+        function restCall () {
+            console.log("restCall");
+            var request = new XMLHttpRequest();
+            const cnt = '{"id":1,"content":"Hello, Stranger!"}';
+            request.open("GET","http://192.168.0.66:8080/hello-world/");
+        <!--    request.open("POST","http://192.168.0.66:8080/hello-world");-->
+            request.setRequestHeader("CONTENT-TYPE","application/json");
+            request.setRequestHeader("Cache-Control","max-age=0, no-cache, no-store, must-revalidate");
+            request.addEventListener('load', function(event) {
+                if (request.status >= 200 && request.status < 300) {
+                    console.log(request.responseText);
+                    document.getElementById('demo2').innerHTML = request.responseText;
+                } else {
+                    console.warn(request.statusText, request.responseText);
+                }
+            });
+        <!--    request.send(cnt);-->
+            request.send( null );
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+<h2>My First JavaScript</h2>
+
+<button type="button" onclick="restCall()">
+    Search
+</button>
+<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+    Click me to display Date and Time.
+</button>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="myJson"></p>
+
+</body>
+</html>
