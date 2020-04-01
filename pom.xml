@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.martinfrank</groupId>
-    <artifactId>garage-server</artifactId>
+    <artifactId>garage-webserver</artifactId>
     <version>0.1.1</version>
 
-    <name>garage-server</name>
+    <name>garage-webserver</name>
     <description>this project provides a command line interface</description>
     <url>https://github.com/martinFrank/commandLineInterface</url>
     <organization>
@@ -24,9 +24,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/github.com/martinFrank/garage-server.git</connection>
-        <developerConnection>scm:git:ssh://github.com/martinFrank/garage-server.git</developerConnection>
-        <url>https://github.com/martinFrank/garage-server/tree/master</url>
+        <connection>scm:git:git://github.com/github.com/martinFrank/garage-webserver.git</connection>
+        <developerConnection>scm:git:ssh://github.com/martinFrank/garage-webserver.git</developerConnection>
+        <url>https://github.com/martinFrank/garage-webserver/tree/master</url>
     </scm>
 
     <licenses>
