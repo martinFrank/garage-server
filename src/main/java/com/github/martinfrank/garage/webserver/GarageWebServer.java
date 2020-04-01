@@ -9,10 +9,10 @@ public class GarageWebServer {
 
     public static void main(String[] args) {
         try {
-            System.out.println("starting new Webserver");
+            System.out.println("starting new webserver");
             new GarageWebServer().startUp();
         } catch (IOException e) {
-            System.out.println("error starting Webserver: " + e);
+            System.out.println("error starting webserver: " + e);
             e.printStackTrace();
         }
     }
@@ -23,7 +23,7 @@ public class GarageWebServer {
         server.createContext("/garage/webserver", webServerRequestHandler);
         server.setExecutor(null); // creates a default executor
         server.start();
-        System.out.println("server ist started...");
+        System.out.println("webserver is started...");
     }
 
 
