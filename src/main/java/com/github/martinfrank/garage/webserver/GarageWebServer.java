@@ -1,35 +1,29 @@
-package com.github.martinfrank.garageserver;
+package com.github.martinfrank.garage.webserver;
 
-import com.pi4j.io.gpio.GpioController;
-import com.pi4j.io.gpio.GpioFactory;
 import com.sun.net.httpserver.HttpServer;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
 
-public class GarageServer {
+public class GarageWebServer {
 
     private final HttpServer server;
-    private final GpioController gpio;
     private final WebServerRequestHandler webServerRequestHandler;
 
 
     public static void main(String[] args) {
         try {
             System.out.println("main...");
-            GarageServer server = new GarageServer();
+            GarageWebServer server = new GarageWebServer();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
 
-    public GarageServer() throws IOException {
+    public GarageWebServer() throws IOException {
 
-
-        gpio = GpioFactory.getInstance();
-        System.out.println("gpio:" + gpio);
-        webServerRequestHandler = new WebServerRequestHandler(gpio);
+        webServerRequestHandler = new WebServerRequestHandler();
         System.out.println("webServerRequestHandler:" + webServerRequestHandler);
         server = HttpServer.create(new InetSocketAddress(8000), 0);
         System.out.println("server:" + server);
