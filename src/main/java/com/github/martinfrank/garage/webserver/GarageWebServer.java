@@ -20,7 +20,7 @@ public class GarageWebServer {
     private void startUp() throws IOException {
         final WebServerRequestHandler webServerRequestHandler = new WebServerRequestHandler();
         final HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
-        server.createContext("/garage/webserver", webServerRequestHandler);
+        server.createContext("/garage", webServerRequestHandler);
         server.setExecutor(null); // creates a default executor
         server.start();
         System.out.println("webserver is started...");

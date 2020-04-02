@@ -3,3 +3,14 @@ WLAN Config Tool
 ---
 https://raspberrypi.stackexchange.com/questions/11631/how-to-setup-multiple-wifi-networks
 sudo wicd-curses
+
+
+java processes
+jps -lV
+
+Lebenszeit Raspi
+uptime -p
+
+install a service
+https://www.raspberrypi.org/documentation/linux/usage/systemd.md
+sudo systemctl start garagewebserver.service

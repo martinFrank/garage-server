@@ -21,18 +21,18 @@ public class WebServerRequestHandler implements HttpHandler {
     }
 
     private void createResponse(HttpExchange httpExchange) throws IOException {
-        String response = generateWebsite();
+        String htmlDoc = generateHtmlDocument();
         httpExchange.getResponseHeaders().add("Content-Type", "text/html");
-        httpExchange.sendResponseHeaders(200, response.length());
+        httpExchange.sendResponseHeaders(200, htmlDoc.length());
         OutputStream os = httpExchange.getResponseBody();
-        os.write(response.getBytes(StandardCharsets.UTF_8));
+        os.write(htmlDoc.getBytes(StandardCharsets.UTF_8));
         os.close();
     }
 
 
-    private String generateWebsite() {
+    private String generateHtmlDocument() {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(
-                getClass().getResourceAsStream("/template.html")))) {
+                getClass().getResourceAsStream("/template.js")))) {
             StringBuilder sb = new StringBuilder();
             while (reader.ready()) {
                 String line = reader.readLine();
@@ -44,4 +44,5 @@ public class WebServerRequestHandler implements HttpHandler {
             return "<html>an error happened during the preparation of this website\nerror:\n" + e + "<html>";
         }
     }
+
 }

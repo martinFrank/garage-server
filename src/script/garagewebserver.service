@@ -1,0 +1,14 @@
+[Unit]
+Description=garage web service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/java -jar garage-webserver-0.0.1-jar-with-dependencies.jar
+WorkingDirectory=/home/pi/garageserver/web
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
