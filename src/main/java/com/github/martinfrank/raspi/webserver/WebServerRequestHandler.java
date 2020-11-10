@@ -1,4 +1,4 @@
-package com.github.martinfrank.garage.webserver;
+package com.github.martinfrank.raspi.webserver;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;

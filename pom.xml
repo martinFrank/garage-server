@@ -156,7 +156,7 @@
                     <!-- MainClass in mainfest make a executable jar -->
                     <archive>
                         <manifest>
-                            <mainClass>com.github.martinfrank.garage.webserver.GarageWebServer</mainClass>
+                            <mainClass>com.github.martinfrank.raspi.webserver.GarageWebServer</mainClass>
                         </manifest>
                     </archive>
 
