@@ -12,3 +12,5 @@ sudo chmod a+x /var/log/motion/motion.log
 
 #start cam service
 sudo service motion start
+
+services kommen in dieses Verzeichnis: /etc/systemd/system
